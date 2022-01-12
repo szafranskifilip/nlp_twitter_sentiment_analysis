@@ -10,6 +10,7 @@ The problem is to understand your audience, keep on top of what’s being said a
 
 ## Data source
 Data source - tweet_product_company.csv
+
 GloVe embeddings download link - https://nlp.stanford.edu/projects/glove/
 
 Data overview
