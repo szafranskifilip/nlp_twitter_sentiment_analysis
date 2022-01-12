@@ -12,6 +12,10 @@ The problem is to understand your audience, keep on top of what’s being said a
 Data source - tweet_product_company.csv
 GloVe embeddings download link - https://nlp.stanford.edu/projects/glove/
 
+Data overview
+
+![img](./img/df.png)
+
 ![img](./img/plots.png)
 
 
@@ -28,6 +32,7 @@ GloVe embeddings download link - https://nlp.stanford.edu/projects/glove/
 - Load GloVe file into dictionary
 - Create word embedding/word context matrix
 - Create embedding layer including embedding matrix for weights
+
 
 
 ## Notbook describition
@@ -60,6 +65,7 @@ GloVe embeddings download link - https://nlp.stanford.edu/projects/glove/
 - from keras import layers
 - from keras import optimizers
 - from keras.layers import Dense, Dropout, Embedding, LSTM, GlobalMaxPooling1D, SpatialDropout1D
+
 
 
 #### Model architecture overview
@@ -127,6 +133,12 @@ GloVe embeddings download link - https://nlp.stanford.edu/projects/glove/
     Training Accuracy: 0.7210
     Testing Accuracy:  0.6905
 ```
+
+Confusion matrix for model 3
+
+![img](./img/c_matrix.png)
+
+
 - Model 4: GRU Layer Stacking
 ```
     _________________________________________________________________
