@@ -1,4 +1,4 @@
-![img](./img/main.jpg)
+![img](./img/main.png)
 
 # Apple and Google products - Twitter Sentiment Analysis
 Sentiment analysis refers to identifying as well as classifying the sentiments that are expressed in the text source. 
@@ -12,15 +12,15 @@ The problem is to understand your audience, keep on top of what’s being said a
 Data source - tweet_product_company.csv
 GloVe embeddings download link - https://nlp.stanford.edu/projects/glove/
 
-![img](./img/plots.jpg)
+![img](./img/plots.png)
 
 
 ## Data processing
 
 - Combine labels "I can't tell" and 'No emotion toward brand or product' to one category "Neutral emotion"
 - Break apart the data and the labels
-- Categorize target labels {0: 'Negative emotion', 1: 'Neutral emotion', 2: 'Positive emotion'}
-- Get class weights to address class imbalance {1: 0.6097668279806423, 2: 0.327540695116586, 0: 0.06269247690277167}
+- Categorize target labels *{0: 'Negative emotion', 1: 'Neutral emotion', 2: 'Positive emotion'}*
+- Get class weights to address class imbalance *{1: 0.6097668279806423, 2: 0.327540695116586, 0: 0.06269247690277167}*
 - Convert training data into tensors to feed into neural net with Tokenizer() and fit_on_texts()
 - Transforms each text in texts to a sequence of integers with Tokenizer() and text_to_sequences()
 - Truncate and pad input sequences to be all the same lenght vectors with pad_sequences()
@@ -65,6 +65,7 @@ GloVe embeddings download link - https://nlp.stanford.edu/projects/glove/
 #### Model architecture overview
 
 - Model 1: Simple LSTM Model with regularization, increase dimensionality
+    ```
     _________________________________________________________________
     Layer (type)                 Output Shape              Param #   
     =================================================================
@@ -81,9 +82,10 @@ GloVe embeddings download link - https://nlp.stanford.edu/projects/glove/
     
     Training Accuracy: 0.8525
     Testing Accuracy:  0.6734
+    ```
 
 - Model 2: LSTM with regularization, reduce dimensionality
-
+```
     _________________________________________________________________
     Layer (type)                 Output Shape              Param #   
     =================================================================
@@ -101,9 +103,9 @@ GloVe embeddings download link - https://nlp.stanford.edu/projects/glove/
     _________________________________________________________________
     Training Accuracy: 0.7100
     Testing Accuracy:  0.6756
-
+```
 - Model 3: LSTM Layer Stacking
-
+```
     _________________________________________________________________
     Layer (type)                 Output Shape              Param #   
     =================================================================
@@ -124,9 +126,9 @@ GloVe embeddings download link - https://nlp.stanford.edu/projects/glove/
     
     Training Accuracy: 0.7210
     Testing Accuracy:  0.6905
-
+```
 - Model 4: GRU Layer Stacking
-
+```
     _________________________________________________________________
     Layer (type)                 Output Shape              Param #   
     =================================================================
@@ -144,13 +146,13 @@ GloVe embeddings download link - https://nlp.stanford.edu/projects/glove/
     _________________________________________________________________
     Training Accuracy: 0.7459
     Testing Accuracy:  0.6954
-
+```
 - Other models
-
+```
     [('Random Forest', 0.6097668279806423),
      ('Support Vector Machine', 0.6097668279806423),
      ('Logistic Regression', 0.6097668279806423)]
-
+```
 
 ## Sumarry
 
