@@ -14,6 +14,19 @@ GloVe embeddings download link - https://nlp.stanford.edu/projects/glove/
 
 Data overview
 
+```
+<class 'pandas.core.frame.DataFrame'>
+Int64Index: 9092 entries, 0 to 9092
+Data columns (total 3 columns):
+ #   Column      Non-Null Count  Dtype 
+---  ------      --------------  ----- 
+ 0   tweet_text  9092 non-null   object
+ 1   product     3291 non-null   object
+ 2   label       9092 non-null   object
+dtypes: object(3)
+memory usage: 604.1+ KB
+```
+
 ![img](./img/df.png)
 
 ![img](./img/plots.png)
