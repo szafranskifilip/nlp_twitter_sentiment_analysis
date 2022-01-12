@@ -125,7 +125,7 @@ memory usage: 604.1+ KB
     Testing Accuracy:  0.6756
 ```
 - Model 3: LSTM Layer Stacking
-```
+    ```
     _________________________________________________________________
     Layer (type)                 Output Shape              Param #   
     =================================================================
@@ -146,15 +146,15 @@ memory usage: 604.1+ KB
     
     Training Accuracy: 0.7210
     Testing Accuracy:  0.6905
-```
+    ```
 
-Confusion matrix for model 3
+- Confusion matrix for model 3
 
-![img](./img/c_matrix.png)
+    ![img](./img/c_matrix.png)
 
 
 - Model 4: GRU Layer Stacking
-```
+    ```
     _________________________________________________________________
     Layer (type)                 Output Shape              Param #   
     =================================================================
@@ -172,15 +172,15 @@ Confusion matrix for model 3
     _________________________________________________________________
     Training Accuracy: 0.7459
     Testing Accuracy:  0.6954
-```
+    ```
 - Other models
-```
+    ```
     [('Random Forest', 0.6097668279806423),
      ('Support Vector Machine', 0.6097668279806423),
      ('Logistic Regression', 0.6097668279806423)]
-```
+    ```
 
-## Sumarry
+## Summary
 
 #### General Architecture
 
